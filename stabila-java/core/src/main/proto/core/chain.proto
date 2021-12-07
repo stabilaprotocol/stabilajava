@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protocol;
 
-option java_package = "org.tron.trident.proto";
+option java_package = "org.tron.java.proto";
 
 import "google/protobuf/any.proto";
 import "core/common.proto";
@@ -19,10 +19,10 @@ message Transaction {
       WitnessUpdateContract = 8;
       ParticipateAssetIssueContract = 9;
       AccountUpdateContract = 10;
-      FreezeBalanceContract = 11;
-      UnfreezeBalanceContract = 12;
+      CdBalanceContract = 11;
+      UncdBalanceContract = 12;
       WithdrawBalanceContract = 13;
-      UnfreezeAssetContract = 14;
+      UncdAssetContract = 14;
       UpdateAssetContract = 15;
       ProposalCreateContract = 16;
       ProposalApproveContract = 17;
@@ -80,7 +80,7 @@ message Transaction {
 
     string assetIssueID = 14;
     int64 withdraw_amount = 15;
-    int64 unfreeze_amount = 16;
+    int64 uncd_amount = 16;
     int64 exchange_received_amount = 18;
     int64 exchange_inject_another_amount = 19;
     int64 exchange_withdraw_another_amount = 20;

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protocol;
 
-option java_package = "org.tron.trident.proto";
+option java_package = "org.tron.java.proto";
 
 import "core/common.proto";
 
@@ -34,16 +34,16 @@ message AccountPermissionUpdateContract {
 message AssetIssueContract {
   string id = 41;
 
-  message FrozenSupply {
-    int64 frozen_amount = 1;
-    int64 frozen_days = 2;
+  message CdedSupply {
+    int64 cded_amount = 1;
+    int64 cded_days = 2;
   }
   bytes owner_address = 1;
   bytes name = 2;
   bytes abbr = 3;
   int64 total_supply = 4;
-  repeated FrozenSupply frozen_supply = 5;
-  int32 trx_num = 6;
+  repeated CdedSupply cded_supply = 5;
+  int32 stb_num = 6;
   int32 precision = 7;
   int32 num = 8;
   int64 start_time = 9;
@@ -67,7 +67,7 @@ message TransferAssetContract {
   int64 amount = 4;
 }
 
-message UnfreezeAssetContract {
+message UncdAssetContract {
   bytes owner_address = 1;
 }
 
@@ -88,16 +88,16 @@ message ParticipateAssetIssueContract {
   int64 amount = 4;      // the amount of drops
 }
 
-message FreezeBalanceContract {
+message CdBalanceContract {
   bytes owner_address = 1;
-  int64 frozen_balance = 2;
-  int64 frozen_duration = 3;
+  int64 cded_balance = 2;
+  int64 cded_duration = 3;
 
   ResourceCode resource = 10;
   bytes receiver_address = 15;
 }
 
-message UnfreezeBalanceContract {
+message UncdBalanceContract {
   bytes owner_address = 1;
 
   ResourceCode resource = 10;

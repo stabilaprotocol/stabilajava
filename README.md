@@ -1,6 +1,6 @@
-# trident
+# java
 
-trident is a SDK that includes libraries for working with TRON, it makes it easy to build TRON applications with multi-language.
+java is a SDK that includes libraries for working with STABILA, it makes it easy to build STABILA applications with multi-language.
 
 ## Contribution
 
@@ -8,11 +8,11 @@ We're very glad and appreciate to have contributions from the community.
 
 Refer to our [contributing guide](./CONTRIBUTING.md) for more information.
 
-[Join our Telegram group](https://t.me/TronOfficialDevelopersGroupEn)
+[Join our Telegram group](https://t.me/StabilaOfficialDevelopersGroupEn)
 
-## trident-java
+## java-java
 
-trident-java is a lightweight SDK that includes libraries for working with TRON network.
+java-java is a lightweight SDK that includes libraries for working with STABILA network.
 
 Functions include:
 
@@ -20,6 +20,6 @@ Functions include:
 
 - Offline transaction signature 
 
-- java-tron full node API support
+- java-stabila full node API support
 
-For more informations refer to : [trident-java document](https://developers.tron.network/docs/trident-java)
+For more informations refer to : [java-java document](https://developers.stabila.network/docs/java-java)

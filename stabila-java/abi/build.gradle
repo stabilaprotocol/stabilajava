@@ -2,14 +2,14 @@ plugins {
     
 }
 
-description 'TRON Application Binary Interface (ABI) for working with smart contracts'
+description 'STABILA Application Binary Interface (ABI) for working with smart contracts'
 
 dependencies {
     implementation project(':utils')
 }
 
 tasks.create('buildLib', Jar) {
-    baseName = 'trident'
+    baseName = 'java'
     version = null
     from(sourceSets.main.output) {
         include '/**'

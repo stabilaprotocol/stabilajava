@@ -1,6 +1,6 @@
-# Contributing to trident
+# Contributing to java
 
-trident is an open-source project.
+java is an open-source project.
 
 It is the work of contributors. We appreciate your help!
 
@@ -9,7 +9,7 @@ please let us know if anything feels wrong or incomplete.
 
 ## Contribution guidelines
 
-First of all, trident follows GitFlow, the branches description in the trident project are listed as follow:
+First of all, java follows GitFlow, the branches description in the java project are listed as follow:
 
 ``master`` branch:
 This branch contains the latest code released to the production environment. It can only be merged, and can not be modified directly in this branch.
@@ -19,18 +19,18 @@ This branch is the main development branch. It contains the complete code that i
 
 ### Pull requests
 
-If you'd like to contribute to trident, you should follow the steps below:
+If you'd like to contribute to java, you should follow the steps below:
 
-- **Fork** a repository from **tronprotocol/trident** allows you to freely experiment with changes without affecting the original project
+- **Fork** a repository from **stabilaprotocol/java** allows you to freely experiment with changes without affecting the original project
 - **Fix** some code and **Commit** your modified code.
 - **Send** a Pull Request（PR）for the maintainers to review and merge into the main codebase.
-  *notice*：When you create a new PR，please choose the **tronprotocol/trident** as the base repository and choose **your fork/trident** as the head repository.
+  *notice*：When you create a new PR，please choose the **stabilaprotocol/java** as the base repository and choose **your fork/java** as the head repository.
   And you must choose **develop** as the base repository branch, which means we will merge the PR into our **develop** branch when reviewed and approved.
   Additionally, if you are writing a new feature, please ensure you add appropriate test cases under ``/src/test``.
 
 After the PR is checked by our Sonar check procedure and Travis CI continuous-integration check procedure automatically,
 we maintainers will review the code changed and give some advice for modifying if necessary. Once approved,
-we will close the PR and merge it into the protocol/trident's develop branch.
+we will close the PR and merge it into the protocol/java's develop branch.
 
 We are always happy to receive pull requests and do our best to
 review them as fast as possible. Not sure if that typo is worth a pull
@@ -51,14 +51,8 @@ must be limited to 50 words.
 ### Create issues
 
 Any significant improvement should be documented as [a GitHub
-issue](https://github.com/tronprotocol/trident/issues) before anyone
+issue](https://github.com/stabilaprotocol/java/issues) before anyone
 starts working on it.
-
-When filing an issue, make sure to answer these three questions:
-
-- What did you do?
-- What did you expect to see?
-- What did you see instead?
 
 ### Please check existing issues and docs first!
 

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protocol;
 
-option java_package = "org.tron.trident.api";
+option java_package = "org.tron.java.api";
 option java_outer_classname = "GrpcAPI";
 
 
@@ -41,8 +41,8 @@ service Wallet {
   rpc ParticipateAssetIssue(ParticipateAssetIssueContract) returns (Transaction) {}
   rpc ParticipateAssetIssue2(ParticipateAssetIssueContract) returns (TransactionExtention) {}
 
-  rpc UnfreezeAsset(UnfreezeAssetContract) returns (Transaction) {}
-  rpc UnfreezeAsset2(UnfreezeAssetContract) returns (TransactionExtention) {}
+  rpc UncdAsset(UncdAssetContract) returns (Transaction) {}
+  rpc UncdAsset2(UncdAssetContract) returns (TransactionExtention) {}
 
   rpc CreateWitness(WitnessCreateContract) returns (Transaction) {}
   rpc CreateWitness2(WitnessCreateContract) returns (TransactionExtention) {}
@@ -55,11 +55,11 @@ service Wallet {
   rpc VoteWitnessAccount(VoteWitnessContract) returns (Transaction) {}
   rpc VoteWitnessAccount2(VoteWitnessContract) returns (TransactionExtention) {}
 
-  rpc FreezeBalance(FreezeBalanceContract) returns (Transaction) {}
-  rpc FreezeBalance2(FreezeBalanceContract) returns (TransactionExtention) {}
+  rpc CdBalance(CdBalanceContract) returns (Transaction) {}
+  rpc CdBalance2(CdBalanceContract) returns (TransactionExtention) {}
 
-  rpc UnfreezeBalance(UnfreezeBalanceContract) returns (Transaction) {}
-  rpc UnfreezeBalance2(UnfreezeBalanceContract) returns (TransactionExtention) {}
+  rpc UncdBalance(UncdBalanceContract) returns (Transaction) {}
+  rpc UncdBalance2(UncdBalanceContract) returns (TransactionExtention) {}
 
   rpc WithdrawBalance(WithdrawBalanceContract) returns (Transaction) {}
   rpc WithdrawBalance2(WithdrawBalanceContract) returns (TransactionExtention) {}

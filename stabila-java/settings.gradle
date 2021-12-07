@@ -2,7 +2,7 @@ pluginManagement {
 
 }
 
-rootProject.name = 'trident'
+rootProject.name = 'java'
 
 include 'utils'
 include 'abi'

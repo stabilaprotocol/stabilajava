@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protocol;
 
-option java_package = "org.tron.trident.proto";
+option java_package = "org.tron.java.proto";
 
 enum ResourceCode {
   BANDWIDTH = 0x00;
@@ -88,7 +88,7 @@ message SmartContract {
   string name = 7;
   int64 origin_energy_limit = 8;
   bytes code_hash = 9;
-  bytes trx_hash = 10;
+  bytes stb_hash = 10;
 }
 
 message Vote {
