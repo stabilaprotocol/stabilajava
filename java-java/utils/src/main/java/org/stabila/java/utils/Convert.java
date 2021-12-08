@@ -18,24 +18,24 @@ import java.math.BigDecimal;
 public final class Convert {
     private Convert() {}
 
-    public static BigDecimal fromSun(String number, Unit unit) {
-        return fromSun(new BigDecimal(number), unit);
+    public static BigDecimal fromUnit(String number, Unit unit) {
+        return fromUnit(new BigDecimal(number), unit);
     }
 
-    public static BigDecimal fromSun(BigDecimal number, Unit unit) {
-        return number.divide(unit.getSunFactor());
+    public static BigDecimal fromUnit(BigDecimal number, Unit unit) {
+        return number.divide(unit.getUnitFactor());
     }
 
-    public static BigDecimal toSun(String number, Unit unit) {
-        return toSun(new BigDecimal(number), unit);
+    public static BigDecimal toUnit(String number, Unit unit) {
+        return toUnit(new BigDecimal(number), unit);
     }
 
-    public static BigDecimal toSun(BigDecimal number, Unit unit) {
-        return number.multiply(unit.getSunFactor());
+    public static BigDecimal toUnit(BigDecimal number, Unit unit) {
+        return number.multiply(unit.getUnitFactor());
     }
 
     public enum Unit {
-        SUN("unit", 0),
+        UNIT("unit", 0),
         STB("stb", 6);
 
         private String name;
@@ -46,7 +46,7 @@ public final class Convert {
             this.unitFactor = BigDecimal.TEN.pow(factor);
         }
 
-        public BigDecimal getSunFactor() {
+        public BigDecimal getUnitFactor() {
             return unitFactor;
         }
 

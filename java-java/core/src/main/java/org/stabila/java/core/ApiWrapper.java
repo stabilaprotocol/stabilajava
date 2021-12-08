@@ -312,7 +312,7 @@ public class ApiWrapper {
     }
 
     /**
-     * Transfer STB. amount in SUN
+     * Transfer STB. amount in UNIT
      * @param fromAddress owner address
      * @param toAddress receive balance
      * @param amount transfer amount

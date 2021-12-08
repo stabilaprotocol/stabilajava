@@ -23,25 +23,25 @@ public class ConvertTest {
     @Test
     public void testFromSum() {
         assertEquals(
-                Convert.fromSun("21000000000000", Convert.Unit.SUN),
+                Convert.fromUnit("21000000000000", Convert.Unit.UNIT),
                 (new BigDecimal("21000000000000")));
 
         assertEquals(
-                Convert.fromSun("21000000000000", Convert.Unit.STB),
+                Convert.fromUnit("21000000000000", Convert.Unit.STB),
                 (new BigDecimal("21000000")));
     }
 
     @Test
     public void testToWei() {
-        assertEquals(Convert.toSun("21", Convert.Unit.SUN), (new BigDecimal("21")));
+        assertEquals(Convert.toUnit("21", Convert.Unit.UNIT), (new BigDecimal("21")));
         assertEquals(
-                Convert.toSun("21", Convert.Unit.STB), (new BigDecimal("21000000")));
+                Convert.toUnit("21", Convert.Unit.STB), (new BigDecimal("21000000")));
     }
 
     @Test
     public void testUnit() {
         assertEquals(Convert.Unit.fromString("stb"), (Convert.Unit.STB));
         assertEquals(Convert.Unit.fromString("STB"), (Convert.Unit.STB));
-        assertEquals(Convert.Unit.fromString("unit"), (Convert.Unit.SUN));
+        assertEquals(Convert.Unit.fromString("unit"), (Convert.Unit.UNIT));
     }
 }
