@@ -1,14 +1,12 @@
 # java
 
-Trident-Java is a lightweight SDK that includes libraries for working with STABILA system contracts and smart contracts.
+Java-Java is a lightweight SDK that includes libraries for working with STABILA system contracts and smart contracts.
 
-Trident-Java makes it easy to build STABILA applications with java.
-
-[Trident-Java document](https://developers.tron.network/docs/java-java)
+Java-Java makes it easy to build STABILA applications with java.
 
 Due to safety concerns, java-java will no longer upload packaged files to maven. Please clone the code from GitHub and do the packaging.
 
-Trident-java is compiled with java version 1.8.0_231 and gradle 5.6.4.
+Java-java is compiled with java version 1.8.0_231 and gradle 5.6.4.
 
 ## How to use
 
