@@ -1,3 +1,7 @@
+<h1 align="center">
+  <img align="center" src="https://raw.githubusercontent.com/stabilaprotocol/wiki/master/images/Logo_Stabila_WhiteMetal.png" width="200"/>
+</h1>
+
 # Java
 
 Java is a SDK that includes libraries for working with STABILA, it makes it easy to build STABILA applications with multi-language.
