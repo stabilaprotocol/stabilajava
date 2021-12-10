@@ -23,3 +23,6 @@ Functions include:
 - Offline transaction signature 
 
 - java-stabila full node API support
+
+## Suggestions, Feedback & Issues
+If you have a suggestion for improvement, feedback about a specific feature or any issue please contact us at info@stabilascan.org
