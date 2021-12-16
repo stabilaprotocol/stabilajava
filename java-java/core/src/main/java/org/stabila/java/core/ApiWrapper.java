@@ -1429,16 +1429,4 @@ public class ApiWrapper {
         return new TransactionBuilder(txnExt.getTransaction());
     }
 
-    public static void main(String[] args) {
-        KeyPair keyPair = generateAddress();
-        //System.out.println(keyPair.toPrivateKey());
-        //System.out.println(keyPair.toBase58CheckAddress());
-        //System.out.println(keyPair.toHexAddress());
-
-
-        ApiWrapper apiWrapper = new ApiWrapper(Constant.MAIN_NET, Constant.MAIN_NET_SOLIDITY, "");
-        long balance = apiWrapper.getAccountBalance("SjDEuy15CVMuyFFDhMxLdscQGpJTusu96B");
-        System.out.println(balance);
-    }
-
 }
