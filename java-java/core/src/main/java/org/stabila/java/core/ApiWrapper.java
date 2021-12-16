@@ -6,14 +6,12 @@ import org.stabila.java.abi.datatypes.Function;
 import org.stabila.java.api.GrpcAPI.BytesMessage;
 
 import org.stabila.java.core.contract.Contract;
-import org.stabila.java.core.Constant;
 import org.stabila.java.api.WalletGrpc;
 import org.stabila.java.api.WalletSolidityGrpc;
 import org.stabila.java.core.contract.ContractFunction;
 import org.stabila.java.core.exceptions.IllegalException;
 import org.stabila.java.core.key.KeyPair;
 import org.stabila.java.core.transaction.TransactionBuilder;
-import org.stabila.java.crypto.SECP256K1;
 import org.stabila.java.proto.Chain.Transaction;
 
 import org.stabila.java.proto.Chain.Block;
@@ -63,8 +61,6 @@ import io.grpc.stub.MetadataUtils;
 import java.nio.ByteBuffer;
 import java.util.*;
 
-import org.stabila.java.crypto.tuwenitypes.Bytes32;
-import org.bouncycastle.jcajce.provider.digest.Keccak;
 import org.bouncycastle.jcajce.provider.digest.SHA256;
 import org.bouncycastle.util.encoders.Hex;
 import org.stabila.java.proto.Response.NodeList;
@@ -143,40 +139,18 @@ public class ApiWrapper {
      * @return a ApiWrapper object
      */
     public static ApiWrapper ofMainnet(String hexPrivateKey, String apiKey) {
-        return new ApiWrapper(Constant.STABILAGRID_MAIN_NET, Constant.STABILAGRID_MAIN_NET_SOLIDITY, hexPrivateKey, apiKey);
+        return new ApiWrapper(Constant.MAIN_NET, Constant.MAIN_NET_SOLIDITY, hexPrivateKey, apiKey);
     }
 
     /**
      * The constuctor for main net.
-     * @deprecated 
-     * This method will only be available before StabilaGrid prohibits the use without API key
-     * 
+     *
      * @param hexPrivateKey the binding private key. Operations require private key will all use this unless the private key is specified elsewhere.
      * @param apiKey this function works with StabilaGrid, an API key is required.
      * @return a ApiWrapper object
      */
-    @Deprecated
     public static ApiWrapper ofMainnet(String hexPrivateKey) {
-        return new ApiWrapper(Constant.STABILAGRID_MAIN_NET, Constant.STABILAGRID_MAIN_NET_SOLIDITY, hexPrivateKey);
-    }
-
-    /**
-     * The constuctor for Shasta test net. Use StabilaGrid as default.
-     * @param hexPrivateKey the binding private key. Operations require private key will all use this unless the private key is specified elsewhere.
-     * @param apiKey this function works with StabilaGrid, an API key is required.
-     * @return a ApiWrapper object
-     */
-    public static ApiWrapper ofShasta(String hexPrivateKey) {
-        return new ApiWrapper(Constant.STABILAGRID_SHASTA, Constant.STABILAGRID_SHASTA_SOLIDITY, hexPrivateKey);
-    }
-
-    /**
-     * The constuctor for Nile test net.
-     * @param hexPrivateKey the binding private key. Operations require private key will all use this unless the private key is specified elsewhere.
-     * @return a ApiWrapper object
-     */
-    public static ApiWrapper ofNile(String hexPrivateKey) {
-        return new ApiWrapper(Constant.FULLNODE_NILE, Constant.FULLNODE_NILE_SOLIDITY, hexPrivateKey);
+        return new ApiWrapper(Constant.MAIN_NET, Constant.MAIN_NET_SOLIDITY, hexPrivateKey);
     }
 
     /**
@@ -1453,6 +1427,18 @@ public class ApiWrapper {
         TransactionExtention txnExt = callWithoutBroadcast(ownerAddr, cntr, function);
 
         return new TransactionBuilder(txnExt.getTransaction());
+    }
+
+    public static void main(String[] args) {
+        KeyPair keyPair = generateAddress();
+        //System.out.println(keyPair.toPrivateKey());
+        //System.out.println(keyPair.toBase58CheckAddress());
+        //System.out.println(keyPair.toHexAddress());
+
+
+        ApiWrapper apiWrapper = new ApiWrapper(Constant.MAIN_NET, Constant.MAIN_NET_SOLIDITY, "");
+        long balance = apiWrapper.getAccountBalance("SjDEuy15CVMuyFFDhMxLdscQGpJTusu96B");
+        System.out.println(balance);
     }
 
 }
