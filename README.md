@@ -1,6 +1,10 @@
-# java
+<h1 align="center">
+  <img align="center" src="https://raw.githubusercontent.com/stabilaprotocol/wiki/master/images/Logo_Stabila_WhiteMetal.png" width="200"/>
+</h1>
 
-java is a SDK that includes libraries for working with STABILA, it makes it easy to build STABILA applications with multi-language.
+# Java
+
+Java is a SDK that includes libraries for working with STABILA, it makes it easy to build STABILA applications with multi-language.
 
 ## Contribution
 
@@ -8,11 +12,9 @@ We're very glad and appreciate to have contributions from the community.
 
 Refer to our [contributing guide](./CONTRIBUTING.md) for more information.
 
-[Join our Telegram group](https://t.me/StabilaOfficialDevelopersGroupEn)
+## Java-Java
 
-## java-java
-
-java-java is a lightweight SDK that includes libraries for working with STABILA network.
+Java-Java is a lightweight SDK that includes libraries for working with STABILA network.
 
 Functions include:
 
@@ -22,4 +24,5 @@ Functions include:
 
 - java-stabila full node API support
 
-For more informations refer to : [java-java document](https://developers.stabila.network/docs/java-java)
+## Suggestions, Feedback & Issues
+If you have a suggestion for improvement, feedback about a specific feature or any issue please contact us at info@stabilascan.org
